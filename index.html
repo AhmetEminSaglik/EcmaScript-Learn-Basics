@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-
-
-<!-- <script src="strictmode.js"></script>
-<script src="app.js"></script> -->
-<script src="object.js"></script>
-<body>
+  <p id="demo">p tag</p>
+  <script>
+    document.getElementById("demo").innerHTML="Test line"; // this changes the value of inside the tag
+    document.write(3+4); // this adds new values to the tag
     
-</body>
+  </script>
+  <button type="button" onclick="document.write(10+10)"> Try it</button>
+  <script src="es-5.js"></script>
+  <!-- <script src="strictmode.js"></>
+<script src="app.js"></script> -->
+  <!-- <script src="object.js"></script> -->
+  <body></body>
 </html>
