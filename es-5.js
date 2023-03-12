@@ -53,3 +53,12 @@ var b = 3;
     console.log("(re-defined, global value is assigned) var inner b : " + b)
 }
 
+const cars = ["Volvo", "BMW"];
+console.log(cars);
+cars.push("Audi")
+console.log(cars);
+
+const cars2 = { "name": "BMW", "year": 2023}
+console.log(cars2);
+cars2.color="red"
+console.log(cars2);
