@@ -14,7 +14,9 @@
   </script>
 
   <!-- <button onclick="displayDate()">The time is?</button> -->
-  <button onmouseover="displayDate()", onmouseleave="displayText()">The time is?</button>
+  <button onmouseover="displayDate()" , onmouseleave="displayText()">
+    The time is?
+  </button>
 
   <script>
     function displayDate() {
@@ -24,14 +26,40 @@
       document.getElementById("demo").innerHTML = "Test Line";
     }
   </script>
+  <script>
+    const points = [40, 100, 1, 5, 25, 10];
+
+    function myFunction1() {
+      points.sort();
+      document.getElementById("demo3").innerHTML = "numbers : " + points;
+    }
+    function myFunction2() {
+      points.sort(function (a, b) {
+        return a - b;
+      });
+      document.getElementById("demo3").innerHTML = "numbers : " + points;
+    }
+    function myFunction3() {
+      points.sort(function (a, b) {
+        return 0.5 - Math.random();
+      });
+      document.getElementById("demo3").innerHTML = "numbers : " + points;
+    }
+  </script>
 
   <button type="button" onclick="document.write(10+10)">Try it</button>
   <script src="es-5.js"></script>
 
   <p id="demo2"></p>
 
-<p>Template literals are not supported in Internet Explorer.</p>
+  <p>Template literals are not supported in Internet Explorer.</p>
+  <button onclick="myFunction1()">Sort Alphabetically</button>
+  <button onclick="myFunction2()">Sort Numerically</button>
+  <button onclick="myFunction3()">Sort Random order</button>
 
+  <p id="demo3">numbers : 40, 100, 1, 5, 25, 10</p>
+
+  <!-- 
 <script>
 let header = "Templates Literals";
 let tags = ["template literals", "javascript", "es6"];
@@ -45,7 +73,7 @@ for (const x of tags) {
 html += `</ul>`;
 document.getElementById("demo2").innerHTML = html;
 </script>
-
+ -->
 
   <!-- <script src="strictmode.js"></>
 <script src="app.js"></script> -->

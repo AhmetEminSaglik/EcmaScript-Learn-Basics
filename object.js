@@ -1,41 +1,41 @@
 const person = {
-    firstName: 'John',
-    lastName: 'Doe',
-    id: 2345,
-    fullName: function () {
-        return 'first Name : '+this.firstName + ', last name :' + this.lastName; // this must be used in object
-    },
-    myFunction:  function () {
-        return this;
-    }
+  firstName: 'John',
+  lastName: 'Doe',
+  id: 2345,
+  fullName: function () {
+    return 'first Name : ' + this.firstName + ', last name :' + this.lastName; // this must be used in object
+  },
+  myFunction: function () {
+    return this;
+  }
 }
 
 
 console.log("person.fullName  :\n\n " + person.fullName)
-console.log("person.fullName()  :\n\n " +person.fullName())
+console.log("person.fullName()  :\n\n " + person.fullName())
 
 console.log("person.myFunction  :\n\n " + person.myFunction) // return object function code  in String format
-console.log("person.myFunction()  :\n\n " +person.myFunction())// return object function result
-console.log("person.myFunction()  :\n\n " +person.myFunction().firstName) // return object's firstName parameter 
+console.log("person.myFunction()  :\n\n " + person.myFunction())// return object function result
+console.log("person.myFunction()  :\n\n " + person.myFunction().firstName) // return object's firstName parameter 
 
 const person1 = {
-    fullName: function() {
-      return this.firstName + " " + this.lastName;
-    }
+  fullName: function () {
+    return this.firstName + " " + this.lastName;
   }
-  
-  const person2 = {
-    name:"Alice", // person1 has firstName but here it is name.
-    lastName: "Borderland",
-    age : 5
-  }
-  console.log(person1.fullName.call(person2));
-  
+}
+
+const person2 = {
+  name: "Alice", // person1 has firstName but here it is name.
+  lastName: "Borderland",
+  age: 5
+}
+console.log(person1.fullName.call(person2));
+
 
 
 // With the bind() method, an object can borrow a method from another object.
 const person3 = {
-  firstName:"Bob",
+  firstName: "Bob",
   lastName: "Marlins",
   fullName: function () {
     return this.firstName + " " + this.lastName;
@@ -43,7 +43,7 @@ const person3 = {
 }
 
 const member = {
-  firstName:"Hege",
+  firstName: "Hege",
   lastName: "Nilsen",
 }
 
