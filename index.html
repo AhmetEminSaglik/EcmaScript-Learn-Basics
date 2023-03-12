@@ -9,12 +9,44 @@
 
   <p id="demo">p tag</p>
   <script>
-    document.getElementById("demo").innerHTML="Test line"; // this changes the value of inside the tag
-    document.write(3+4); // this adds new values to the tag
-    
+    document.getElementById("demo").innerHTML = "Test line"; // this changes the value of inside the tag
+    document.write(3 + 4); // this adds new values to the tag
   </script>
-  <button type="button" onclick="document.write(10+10)"> Try it</button>
+
+  <!-- <button onclick="displayDate()">The time is?</button> -->
+  <button onmouseover="displayDate()", onmouseleave="displayText()">The time is?</button>
+
+  <script>
+    function displayDate() {
+      document.getElementById("demo").innerHTML = Date();
+    }
+    function displayText() {
+      document.getElementById("demo").innerHTML = "Test Line";
+    }
+  </script>
+
+  <button type="button" onclick="document.write(10+10)">Try it</button>
   <script src="es-5.js"></script>
+
+  <p id="demo2"></p>
+
+<p>Template literals are not supported in Internet Explorer.</p>
+
+<script>
+let header = "Templates Literals";
+let tags = ["template literals", "javascript", "es6"];
+
+let html = `<h2>${header}</h2><ul>`;
+
+for (const x of tags) {
+  html += `<li>${x}</li>`;
+}
+
+html += `</ul>`;
+document.getElementById("demo2").innerHTML = html;
+</script>
+
+
   <!-- <script src="strictmode.js"></>
 <script src="app.js"></script> -->
   <!-- <script src="object.js"></script> -->

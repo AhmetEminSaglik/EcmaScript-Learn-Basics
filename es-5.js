@@ -62,3 +62,21 @@ const cars2 = { "name": "BMW", "year": 2023}
 console.log(cars2);
 cars2.color="red"
 console.log(cars2);
+console.log(cars2.color);
+console.log(cars2["color"]);
+let searchedText=text.matchAll(/Cats/gi); // g --> global search\ i --> case insensitive
+
+let firstName="Ahmet Emin"
+let lastName="Saglik"
+
+//define strings with back-ticks rather then the quotes as follow
+// back-ticks get values of ${property}
+let fullName=`Welcome ${firstName}, ${lastName}`;
+console.log(fullName)
+
+
+let price = 10;
+let VAT = 0.25;
+
+let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`; // to fixed means digit value after dot.
+console.log(total)
