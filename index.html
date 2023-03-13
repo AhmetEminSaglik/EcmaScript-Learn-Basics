@@ -8,25 +8,33 @@
   </head>
 
   <p id="demo">p tag</p>
+  <!-- <script src="strictmode.js"></script> -->
+  <!-- <script src="strict-mode-disabled.js"></script> -->
+  <!-- <script src="object.js"></script> -->
+  <!-- <script src="string-methods.js"></script> -->
+  <!-- <script src="inner-global.js"></script> -->
+  <!-- <script src="array.js"></script> -->
+  <!-- <script src="back-ticks.js"></script> -->
+  <!-- <script src="numbers.js"></script> -->
+  <!-- <script src="compare-object.js"></script> -->
+  <!-- <script src="array-vs-object.js"></script> -->
+  <!-- <script src="for-loop.js"></script> -->
+  <!-- <script src="array-methods.js"></script> -->
+  <!-- <script src="array-sort.js"></script> -->
+  <script src="object-sort.js"></script>
+  
+  <!-- <script src="array-iteration.js"></script> -->
   <script>
-    document.getElementById("demo").innerHTML = "Test line"; // this changes the value of inside the tag
+    document.getElementById("demo").innerHTML = "html script : Test line"; // this changes the value of inside the tag
     document.write(3 + 4); // this adds new values to the tag
-  </script>
 
-  <!-- <button onclick="displayDate()">The time is?</button> -->
-  <button onmouseover="displayDate()" , onmouseleave="displayText()">
-    The time is?
-  </button>
-
-  <script>
     function displayDate() {
       document.getElementById("demo").innerHTML = Date();
     }
     function displayText() {
       document.getElementById("demo").innerHTML = "Test Line";
     }
-  </script>
-  <script>
+
     const points = [40, 100, 1, 5, 25, 10];
 
     function myFunction1() {
@@ -45,38 +53,34 @@
       });
       document.getElementById("demo3").innerHTML = "numbers : " + points;
     }
+
+    function myFunctionText() {
+      let header = "Templates Literals";
+      let tags = ["template literals", "javascript", "es6"];
+
+      let html = `<h2>${header}</h2><ul>`;
+
+      for (const x of tags) {
+        html += `<li>${x}</li>`;
+      }
+
+      html += `</ul>`;
+      document.getElementById("text").innerHTML = html; // this changes the value of inside the tag
+    }
   </script>
 
-  <button type="button" onclick="document.write(10+10)">Try it</button>
-  <script src="es-5.js"></script>
+  <body>
+    <button type="button" onclick="document.write(10+10)">Try it</button>
+    <p id="text" onmouseover="myFunctionText()"><b>[ Hover me]</b></p>
+    <button onclick="displayDate()">The time is? (click)</button>
+    <button onmouseover="displayDate()" , onmouseleave="displayText()">
+      The time is? (hover)
+    </button>
+    <p>Template literals are not supported in Internet Explorer.</p>
+    <button onclick="myFunction1()">Sort Alphabetically</button>
+    <button onclick="myFunction2()">Sort Numerically</button>
+    <button onclick="myFunction3()">Sort Random Order</button>
 
-  <p id="demo2"></p>
-
-  <p>Template literals are not supported in Internet Explorer.</p>
-  <button onclick="myFunction1()">Sort Alphabetically</button>
-  <button onclick="myFunction2()">Sort Numerically</button>
-  <button onclick="myFunction3()">Sort Random order</button>
-
-  <p id="demo3">numbers : 40, 100, 1, 5, 25, 10</p>
-
-  <!-- 
-<script>
-let header = "Templates Literals";
-let tags = ["template literals", "javascript", "es6"];
-
-let html = `<h2>${header}</h2><ul>`;
-
-for (const x of tags) {
-  html += `<li>${x}</li>`;
-}
-
-html += `</ul>`;
-document.getElementById("demo2").innerHTML = html;
-</script>
- -->
-
-  <!-- <script src="strictmode.js"></>
-<script src="app.js"></script> -->
-  <!-- <script src="object.js"></script> -->
-  <body></body>
+    <p id="demo3">numbers : 40, 100, 1, 5, 25, 10</p>
+  </body>
 </html>

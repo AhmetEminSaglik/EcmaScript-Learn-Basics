@@ -1,0 +1,1 @@
+console.log("!!! IMPORTANT Comparing two JavaScript objects always returns false.")

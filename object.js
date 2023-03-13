@@ -12,11 +12,11 @@ const person = {
 
 
 console.log("person.fullName  :\n\n " + person.fullName)
-console.log("person.fullName()  :\n\n " + person.fullName())
+console.log("person.fullName()  :  " + person.fullName())
 
 console.log("person.myFunction  :\n\n " + person.myFunction) // return object function code  in String format
-console.log("person.myFunction()  :\n\n " + person.myFunction())// return object function result
-console.log("person.myFunction()  :\n\n " + person.myFunction().firstName) // return object's firstName parameter 
+console.log("person.myFunction()  : " + person.myFunction())// return object function result
+console.log("person.myFunction().firstName  : " + person.myFunction().firstName) // return object's firstName parameter 
 
 const person1 = {
   fullName: function () {
@@ -37,8 +37,9 @@ console.log(person1.fullName.call(person2));
 const person3 = {
   firstName: "Bob",
   lastName: "Marlins",
+  age: 25,
   fullName: function () {
-    return this.firstName + " " + this.lastName;
+    return this.firstName + " " + this.lastName + " " + this.age;
   }
 }
 
@@ -48,7 +49,9 @@ const member = {
 }
 
 let varTest = person3.fullName.bind(member); //if  variable fullName2 use like this return code String format. If it is used with bracktets then it works as function.
-console.log(varTest());
+console.log("person3.fullName() : " + person3.fullName());
+console.log("member (only firstName and lastName is declared): " + member.firstName + " " + member.lastName);
+console.log("person3.fullName.bind(member) : " + varTest());
 
 /* 
 Precedence	Object
