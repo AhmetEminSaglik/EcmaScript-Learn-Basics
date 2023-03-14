@@ -7,24 +7,24 @@
     <title>Document</title>
   </head>
 
-  <p id="demo">p tag</p>
   <!-- <script src="strictmode.js"></script> -->
   <!-- <script src="strict-mode-disabled.js"></script> -->
   <!-- <script src="object.js"></script> -->
   <!-- <script src="string-methods.js"></script> -->
   <!-- <script src="inner-global.js"></script> -->
-  <!-- <script src="array.js"></script> -->
+  <!-- <script src="/array/array.js"></script> -->
   <!-- <script src="back-ticks.js"></script> -->
   <!-- <script src="numbers.js"></script> -->
   <!-- <script src="compare-object.js"></script> -->
-  <!-- <script src="array-vs-object.js"></script> -->
+  <!-- <script src="/array/array-vs-object.js"></script> -->
   <!-- <script src="for-loop.js"></script> -->
-  <!-- <script src="array-methods.js"></script> -->
-  <!-- <script src="array-sort.js"></script> -->
-  <script src="object-sort.js"></script>
-  
-  <!-- <script src="array-iteration.js"></script> -->
-  <script>
+  <!-- <script src="/array/array-methods.js"></script> -->
+  <!-- <script src="/array/array-sort.js"></script> -->
+  <!-- <script src="object-sort.js"></script> -->
+  <!-- <script src="/array/array-iteration.js"></script> -->
+  <script src="/array/array-map.js"></script>
+
+  <!-- <script>
     document.getElementById("demo").innerHTML = "html script : Test line"; // this changes the value of inside the tag
     document.write(3 + 4); // this adds new values to the tag
 
@@ -67,9 +67,14 @@
       html += `</ul>`;
       document.getElementById("text").innerHTML = html; // this changes the value of inside the tag
     }
-  </script>
+  </script> -->
 
   <body>
+    <p id="demo">p tag</p>
+    <!-- <button type="button" id="btn" onclick="printFunction(this);">Click me </button> -->
+
+    <!-- 
+    <p id="demo">p tag</p>
     <button type="button" onclick="document.write(10+10)">Try it</button>
     <p id="text" onmouseover="myFunctionText()"><b>[ Hover me]</b></p>
     <button onclick="displayDate()">The time is? (click)</button>
@@ -81,6 +86,6 @@
     <button onclick="myFunction2()">Sort Numerically</button>
     <button onclick="myFunction3()">Sort Random Order</button>
 
-    <p id="demo3">numbers : 40, 100, 1, 5, 25, 10</p>
+    <p id="demo3">numbers : 40, 100, 1, 5, 25, 10</p> -->
   </body>
 </html>
